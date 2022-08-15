@@ -2,7 +2,7 @@
     max-width: 600px;
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 40%;
     transform: translate(-50%, -50%);
 }
 
@@ -15,4 +15,18 @@
     height: 200px;
     max-width: 250px;
     font-size: 60px;
+    color: white;
+}
+
+.points {
+    margin: auto;
+    justify-content: center;
+}
+
+.points div {
+    padding: 20px;
+    background-color: rgb(132, 133, 125);
+    text-align: center;
+    color: white;
+    margin: 20px;
 }
