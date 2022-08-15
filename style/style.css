@@ -1,0 +1,18 @@
+.tables {
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.tables .col {
+    padding: 60px;
+    background-color: rgb(132, 133, 125);
+    margin: 5px;
+    cursor: pointer;
+    width: 250px;
+    height: 200px;
+    max-width: 250px;
+    font-size: 60px;
+}
