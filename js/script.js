@@ -9,6 +9,11 @@ let col7 = document.querySelector("#seven")
 let col8 = document.querySelector("#eight")
 let col9 = document.querySelector("#nine")
 let coler = col1.style.backgroundColor
+
+let button = document.querySelector("#button")
+let red = document.querySelector("#red")
+let blue = document.querySelector("#blue")
+let points = 0
 let n = 2
 col.forEach(li =>
     li.onclick = function() {
@@ -23,64 +28,99 @@ col.forEach(li =>
             this.style.backgroundColor = "blue"
         }
         n++
+        //that is red side
 
         if (col1.textContent === "X" && col2.textContent === "X" && col3.textContent === "X") {
 
             Swal.fire('RED WINSS....')
+            red.textContent++
         } else if (col4.textContent === "X" && col5.textContent === "X" && col6.textContent === "X") {
             Swal.fire('RED WINSS....')
+            red.textContent++
 
         } else if (col7.textContent === "X" && col8.textContent === "X" && col9.textContent === "X") {
 
             Swal.fire('RED WINSS....')
+            red.textContent++
+
         } else if (col1.textContent === "X" && col4.textContent === "X" && col7.textContent === "X") {
 
             let ok = document.querySelector(".swal2-confirm swal2-styled")
             Swal.fire('RED WINSS....')
-            ok.onclick = function() {
-                console.log("heloo mother fuckker")
-            }
+            red.textContent++
+
+                ok.onclick = function() {
+                    console.log("heloo mother fuckker")
+                }
         } else if (col2.textContent === "X" && col5.textContent === "X" && col8.textContent === "X") {
 
             Swal.fire('RED WINSS....')
+            red.textContent++
+
         } else if (col9.textContent === "X" && col6.textContent === "X" && col3.textContent === "X") {
 
             Swal.fire('RED WINSS....')
+            red.textContent++
+
         } else if (col1.textContent === "X" && col5.textContent === "X" && col9.textContent === "X") {
 
             Swal.fire('RED WINSS....')
+            red.textContent++
+
         } else if (col3.textContent === "X" && col5.textContent === "X" && col7.textContent === "X") {
 
             Swal.fire('RED WINSS....')
+            red.textContent++
+
         }
+        //that is blue side
 
 
         if (col1.textContent === "O" && col2.textContent === "O" && col3.textContent === "O") {
 
             Swal.fire('BLUE WINSS...')
+            blue.textContent++
+
         } else if (col4.textContent === "O" && col5.textContent === "O" && col6.textContent === "O") {
             Swal.fire('BLUE WINSS...')
+            blue.textContent++
 
         } else if (col7.textContent === "O" && col8.textContent === "O" && col9.textContent === "O") {
 
             Swal.fire('BLUE WINSS...')
+            blue.textContent++
+
         } else if (col1.textContent === "O" && col4.textContent === "O" && col7.textContent === "O") {
 
             Swal.fire('BLUE WINSS...')
         } else if (col2.textContent === "O" && col5.textContent === "O" && col8.textContent === "O") {
 
             Swal.fire('BLUE WINSS...')
+            blue.textContent++
+
         } else if (col9.textContent === "O" && col6.textContent === "O" && col3.textContent === "O") {
 
             Swal.fire('BLUE WINSS...')
+            blue.textContent++
+
         } else if (col1.textContent === "O" && col5.textContent === "O" && col9.textContent === "O") {
 
             Swal.fire('BLUE WINSS...')
+            blue.textContent++
+
         } else if (col3.textContent === "O" && col5.textContent === "O" && col7.textContent === "X") {
 
             Swal.fire('BLUE WINSS....')
+            blue.textContent++
+
         }
 
 
 
     });
+button.onclick = function() {
+    col.forEach(li => {
+        li.style.backgroundColor = "rgb(132, 133, 125)"
+        li.textContent = ""
+    });
+}
